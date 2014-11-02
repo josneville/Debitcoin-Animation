@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>DeBitcoin Animation</title>
+		
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+</head>
+<body>
+	<div id="button1">
+		<input type="submit" class="styled-button-1" value="Simulate" /> 
+		
+	</div>
+	<div id="debit">
+		<h1>De-Bitcoin</h1>
+	</div>
+
+
+	<div id="stickman">
+		
+		<img src="./images/stickman1.png" alt="Smiley face" width="100" height="100">
+		<h3>Neville</h3>
+	</div>
+
+	<div id ="bitcoin">
+		<img src="./images/bitcoin.jpg" alt="bitcoin" width="40" height="40">
+	</div>
+	
+	<div id="bitbank">
+		<div id="bitbanktext">
+			
+		</div>
+	
+	</div>
+<div id="bitbanktext1">
+			<h4>Bit: 10.00B</h4>
+		</div>
+	
+	<div id="moneybank">
+		
+	</div>
+		<div id="moneybanktext">
+			<h4>Cash: $5000.00</h4>
+		</div>
+		<div id="moneybanktext1">
+			<h4>Balance: $0.00</h4>
+		</div>
+	<div id="soldchart">
+		<div id=text1>
+		<h4>Current Price $320/1Bit</h4>
+		</div>
+		<div id="soldchartext">
+			<h4></h4>
+		</div>
+	</div>
+	<div id="market">
+			<h3>Bitcoin Market</h3>
+		</div>
+	
+	<div id ="cash">
+		<img src="./images/cash.jpg" alt="cash" width="40" height="40">
+	</div>
+	
+	<div id ="shop">
+		<img src="./images/shop2.jpg" alt="cash" width="130" height="130">
+		<div id="shoptext">
+		<h3>Merchant Cash: $0.00 </h3>
+		</div>
+	</div>
+	</div>
+	
+	<div id="debitserver">
+		<div id="debitservertext"><h3>De-Bitcoin Server<h3></div>
+	</div>
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script> 
+
+
+$(document).ready( 
+$("#button1").click(function(){step0();}));
+
+
+function step0(){
+	$("#bitbank").animate({top:'-=15px',height:'+=15px'},10);
+	$("#bitbanktext1").html("<h4>Bit: 10.00B</h4>");
+	$("#soldchartext").html("<h4></h4>");
+	$("#cash").fadeIn();
+	
+	$("#cash").animate({left:'950px'},2000);
+	$("#moneybank").animate({top:'+=30px',height:'-=30px'},1200,function(){step00();});
+	
+	
+	
+}
+function step00(){
+	
+	$("#cash").animate({left:'950px'},300,function(){step2();});
+}
+
+function step2(){
+		$("#moneybanktext").html("<h4>Cash: $4680.00</h4>");
+		$("#moneybanktext1").html("<h4>Balance:-$320.00</h4>");
+	$("#cash").fadeOut();
+	$("#shoptext").html("<h3>Merchant Cash: $320.00</h3>");
+	$("#cash").fadeOut();
+	$("#bitcoin").fadeIn();
+	$("#bitcoin").animate({top:'450px'},1200);
+	$("#bitbank").animate({top:'+=15px',height:'-=15px'},1600,function(){step3();});
+	
+}
+function step3(){
+	$("#bitbanktext1").html("<h4>Bit: 9.00B</h4>");
+
+	$("#bitcoin").animate({left:'400px'},2000,function (){step4();});
+	
+	
+}
+function step4(){
+		$("#bitcoin").fadeOut();
+		$("#bitcoin").animate({left:'600px'},1);
+		$("#bitcoin").fadeIn();
+		$("#bitcoin").animate({left:'700px'},1000,function(){step44();});
+}
+function step44(){
+		$("#bitcoin").fadeOut();
+		$("#soldchartext").html("<h4>Sold at $320.00</h4>");
+		$("#cash").animate({top:'370px',left:'800px'},10);
+		$("#cash").fadeIn();
+		$("#cash").animate({top:'180px'},1000);
+
+		$("#cash").animate({top:'180px',left:'450px'},2000,function(){step5();});
+		
+		
+		
+}
+function step5(){
+	$("#cash").fadeOut();
+		$("#moneybank").animate({top:'-=30px',height:'+=30px'},1600);
+	$("#moneybanktext").html("<h4>Cash: 5000.00</h4>");
+	$("#moneybanktext1").html("<h4>Balance: $0.00</h4>");
+	$("#bitcoin").animate({top:'300px',left:'300px'},10);
+
+	$("#cash").animate({top:'180px',left:'450px'},10);
+	
+}
+
+
+
+
+
+</script> 
+
+</html>
